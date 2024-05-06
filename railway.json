@@ -1,0 +1,13 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "python -m web_dynamic.100-hbnb"
+  },
+  "deploy": {
+    "startCommand": "flask --app web_dynamic.100-hbnb run",
+    "healthcheckPath": "/100-hbnb",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
+}
